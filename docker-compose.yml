@@ -1,6 +1,6 @@
-version: "3.3"
-services:
-  web:
-    image: bossmanjerry/cicd-image:latest
-    ports:
-      - "5000:5000"
+# version: "3.3"
+# services:
+#   web:
+#     image: bossmanjerry/cicd-image:latest
+#     ports:
+#       - "5000:5000"
