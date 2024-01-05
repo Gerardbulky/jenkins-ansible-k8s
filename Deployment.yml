@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: myapp-container
-          image: docker.io/bossmanjerry/cicd-project:latest
+          image: bossmanjerry/cicd-project:latest
 	  imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000
