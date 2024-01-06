@@ -1,4 +1,4 @@
-# Jenkins Tutorial
+# Jenkins Tutorial.
 My objective today is to demonstrate how to configure a CI/CD pipeline and deploy a containerized application with Jenkins using an AWS Cloud.
 ## What is Jenkins ?
 Jenkins is a popular open source CI/CD tool. It is used to build and test your product continuously. To see this in action, I will walk you through a series of steps or stages.
@@ -158,4 +158,4 @@ To make your pipeline more effective and easier to modify, you can use "Pipeline
    - In your repository create a ```Jenkinsfile``` and paste the scripts
    - In the Jenkins dashboard select ```Pipeline script from SCM```, Put the ```repository URL``` and ```Credential``` and the ```branch```. <br>
    
-   By leveraging webhooks and the "Pipeline Script from SCM" approach, your team can work collaboratively on the Jenkinsfile and make changes with ease, eliminating the need to access the Jenkins dashboard..
+   By leveraging webhooks and the "Pipeline Script from SCM" approach, your team can work collaboratively on the Jenkinsfile and make changes with ease, eliminating the need to access the Jenkins dashboard.
