@@ -5,5 +5,5 @@ RUN pip install -r requirements.txt
 COPY . .
 ENV FLASK_APP=app.py
 # Expose the port the app runs on
-EXPOSE 5000 30010
+EXPOSE 5000 30012
 CMD ["python", "app.py"]
