@@ -1,4 +1,4 @@
-# Jenkins Tutorial
+# Jenkins Tutorial.
 My objective today is to demonstrate how to configure a CI/CD pipeline and deploy a containerized application with Jenkins using an AWS Cloud.
 ## What is Jenkins ?
 Jenkins is a popular open source CI/CD tool. It is used to build and test your product continuously. To see this in action, I will walk you through a series of steps or stages.
