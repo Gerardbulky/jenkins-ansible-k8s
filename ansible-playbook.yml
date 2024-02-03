@@ -1,14 +1,23 @@
 - hosts: all
   become: true
   become_user: root
+  vars:
+    docker_image: "bossmanjerry/{{ JOB_NAME }}:latest"
+    kubeconfig_path: "/home/ubuntu/.kube/config"
+    deployment_file: "/home/ubuntu/Deployment.yml"
+    service_file: "/home/ubuntu/Service.yml"
+
   tasks:
-    - name: delete old deployment
-      command: kubectl delete -f /home/ubuntu/Deployment.yml --kubeconfig=/home/ubuntu/.kube/config
+    - name: Delete old deployment
+      command: kubectl delete -f "{{ deployment_file }}" --kubeconfig="{{ kubeconfig_path }}"
       ignore_errors: true
-    - name: delete old service
-      command: kubectl delete -f /home/ubuntu/Service.yml --kubeconfig=/home/ubuntu/.kube/config
+
+    - name: Delete old service
+      command: kubectl delete -f "{{ service_file }}" --kubeconfig="{{ kubeconfig_path }}"
       ignore_errors: true
-    - name: create new deployment
-      command: kubectl apply -f /home/ubuntu/Deployment.yml --kubeconfig=/home/ubuntu/.kube/config
-    - name: create new service
-      command: kubectl apply -f /home/ubuntu/Service.yml --force --kubeconfig=/home/ubuntu/.kube/config
+
+    - name: Create new deployment
+      command: kubectl apply -f "{{ deployment_file }}" --kubeconfig="{{ kubeconfig_path }}"
+
+    - name: Create new service
+      command: kubectl apply -f "{{ service_file }}" --force --kubeconfig="{{ kubeconfig_path }}"
